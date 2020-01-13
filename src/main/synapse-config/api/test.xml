@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/test" name="test" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" url-mapping="/echo">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>
+                    {
+                      "node":"1"
+                    }
+                </format>
+                <args/>
+            </payloadFactory>
+            <respond description="pay"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
